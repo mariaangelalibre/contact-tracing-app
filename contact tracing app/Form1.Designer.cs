@@ -33,13 +33,15 @@ namespace contact_tracing_app
             this.firstlbl = new System.Windows.Forms.Label();
             this.lasttextbx = new System.Windows.Forms.TextBox();
             this.lastlbl = new System.Windows.Forms.Label();
-            this.adrslbl = new System.Windows.Forms.Label();
+            this.addresslbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.agelbl = new System.Windows.Forms.Label();
             this.agetxtbx = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // firsttxtbx
@@ -60,7 +62,7 @@ namespace contact_tracing_app
             // 
             // lasttextbx
             // 
-            this.lasttextbx.Location = new System.Drawing.Point(90, 49);
+            this.lasttextbx.Location = new System.Drawing.Point(90, 61);
             this.lasttextbx.Name = "lasttextbx";
             this.lasttextbx.Size = new System.Drawing.Size(280, 20);
             this.lasttextbx.TabIndex = 2;
@@ -68,34 +70,34 @@ namespace contact_tracing_app
             // lastlbl
             // 
             this.lastlbl.AutoSize = true;
-            this.lastlbl.Location = new System.Drawing.Point(12, 49);
+            this.lastlbl.Location = new System.Drawing.Point(12, 68);
             this.lastlbl.Name = "lastlbl";
             this.lastlbl.Size = new System.Drawing.Size(68, 13);
             this.lastlbl.TabIndex = 3;
             this.lastlbl.Text = "LAST NAME";
             // 
-            // adrslbl
+            // addresslbl
             // 
-            this.adrslbl.AutoSize = true;
-            this.adrslbl.Location = new System.Drawing.Point(12, 111);
-            this.adrslbl.Name = "adrslbl";
-            this.adrslbl.Size = new System.Drawing.Size(35, 13);
-            this.adrslbl.TabIndex = 4;
-            this.adrslbl.Text = "label2";
+            this.addresslbl.AutoSize = true;
+            this.addresslbl.Location = new System.Drawing.Point(12, 157);
+            this.addresslbl.Name = "addresslbl";
+            this.addresslbl.Size = new System.Drawing.Size(59, 13);
+            this.addresslbl.TabIndex = 4;
+            this.addresslbl.Text = "ADDRESS";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(182, 157);
+            this.label3.Location = new System.Drawing.Point(36, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "label3";
+            this.label3.Text = "PHONE NUMBER";
             // 
             // agelbl
             // 
             this.agelbl.AutoSize = true;
-            this.agelbl.Location = new System.Drawing.Point(12, 81);
+            this.agelbl.Location = new System.Drawing.Point(12, 111);
             this.agelbl.Name = "agelbl";
             this.agelbl.Size = new System.Drawing.Size(29, 13);
             this.agelbl.TabIndex = 6;
@@ -103,44 +105,64 @@ namespace contact_tracing_app
             // 
             // agetxtbx
             // 
-            this.agetxtbx.Location = new System.Drawing.Point(90, 78);
+            this.agetxtbx.Location = new System.Drawing.Point(90, 104);
             this.agetxtbx.Name = "agetxtbx";
             this.agetxtbx.Size = new System.Drawing.Size(280, 20);
             this.agetxtbx.TabIndex = 7;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 247);
+            this.textBox2.Location = new System.Drawing.Point(90, 239);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(280, 20);
             this.textBox2.TabIndex = 8;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(41, 221);
+            this.textBox3.Location = new System.Drawing.Point(90, 193);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(280, 20);
             this.textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(62, 173);
+            this.textBox4.Location = new System.Drawing.Point(90, 150);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(280, 20);
             this.textBox4.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(114, 288);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(382, 310);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.agetxtbx);
             this.Controls.Add(this.agelbl);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.adrslbl);
+            this.Controls.Add(this.addresslbl);
             this.Controls.Add(this.lastlbl);
             this.Controls.Add(this.lasttextbx);
             this.Controls.Add(this.firstlbl);
@@ -158,13 +180,15 @@ namespace contact_tracing_app
         private System.Windows.Forms.Label firstlbl;
         private System.Windows.Forms.TextBox lasttextbx;
         private System.Windows.Forms.Label lastlbl;
-        private System.Windows.Forms.Label adrslbl;
+        private System.Windows.Forms.Label addresslbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label agelbl;
         private System.Windows.Forms.TextBox agetxtbx;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
