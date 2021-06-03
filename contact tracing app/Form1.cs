@@ -91,19 +91,35 @@ namespace contact_tracing_app
         {
             femalechk.Enabled = false;
             otherchk.Enabled = false;
+            if(malechk.CheckState == CheckState.Unchecked)
+            {
+                femalechk.Enabled = true;
+                otherchk.Enabled = true;
+            }
         }
 
         private void femalechk_CheckedChanged(object sender, EventArgs e)
         {
             malechk.Enabled = false;
             otherchk.Enabled = false;
+            if (femalechk.CheckState == CheckState.Unchecked)
+            {
+                malechk.Enabled = true;
+                otherchk.Enabled = true;
+            }
         }
 
         private void otherchk_CheckedChanged(object sender, EventArgs e)
         {
             malechk.Enabled = false;
             femalechk.Enabled = false;
-            genderlbl.Enabled = true;
+            gendertxtbx.Enabled = true;
+            if (otherchk.CheckState == CheckState.Unchecked)
+            {
+                femalechk.Enabled = true;
+                malechk.Enabled = true;
+                gendertxtbx.Enabled = false;
+            }
         }
     }
 }
