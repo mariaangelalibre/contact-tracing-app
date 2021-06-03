@@ -16,5 +16,29 @@ namespace contact_tracing_app
         {
             InitializeComponent();
         }
+
+        private void fillbtn_Click(object sender, EventArgs e)
+        {
+            contactlbl.Visible = true;
+            firstlbl.Visible = true;
+            firsttxtbx.Visible = true;
+            lastlbl.Visible = true;
+            lasttextbx.Visible = true;
+            agelbl.Visible = true;
+            agetxtbx.Visible = true;
+            genderlbl.Visible = true;
+            malechk.Visible = true;
+            femalechk.Visible = true;
+            otherchk.Visible = true;
+            gendertxtbx.Visible = true;
+            addresslbl.Visible = true;
+            addresstxtbx.Visible = true;
+            phonelbl.Visible = true;
+            phonetxtbx.Visible = true;
+            emailtxtbx.Visible = true;
+            emaillbl.Visible = true;
+            pic.Visible = false;
+            fillbtn.Visible = false;
+        }
     }
 }

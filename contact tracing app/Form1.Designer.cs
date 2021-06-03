@@ -29,6 +29,7 @@ namespace contact_tracing_app
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.firsttxtbx = new System.Windows.Forms.TextBox();
             this.firstlbl = new System.Windows.Forms.Label();
             this.lasttextbx = new System.Windows.Forms.TextBox();
@@ -39,15 +40,17 @@ namespace contact_tracing_app
             this.agetxtbx = new System.Windows.Forms.TextBox();
             this.phonetxtbx = new System.Windows.Forms.TextBox();
             this.genderlbl = new System.Windows.Forms.Label();
-            this.contact = new System.Windows.Forms.Label();
+            this.contactlbl = new System.Windows.Forms.Label();
             this.malechk = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.otherchk = new System.Windows.Forms.CheckBox();
             this.femalechk = new System.Windows.Forms.CheckBox();
             this.gendertxtbx = new System.Windows.Forms.TextBox();
             this.addresstxtbx = new System.Windows.Forms.TextBox();
-            this.EMAILLBL = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.emaillbl = new System.Windows.Forms.Label();
+            this.emailtxtbx = new System.Windows.Forms.TextBox();
+            this.pic = new System.Windows.Forms.PictureBox();
+            this.fillbtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
             // firsttxtbx
@@ -56,6 +59,7 @@ namespace contact_tracing_app
             this.firsttxtbx.Name = "firsttxtbx";
             this.firsttxtbx.Size = new System.Drawing.Size(280, 20);
             this.firsttxtbx.TabIndex = 0;
+            this.firsttxtbx.Visible = false;
             // 
             // firstlbl
             // 
@@ -65,6 +69,7 @@ namespace contact_tracing_app
             this.firstlbl.Size = new System.Drawing.Size(72, 13);
             this.firstlbl.TabIndex = 1;
             this.firstlbl.Text = "FIRST NAME";
+            this.firstlbl.Visible = false;
             // 
             // lasttextbx
             // 
@@ -72,6 +77,7 @@ namespace contact_tracing_app
             this.lasttextbx.Name = "lasttextbx";
             this.lasttextbx.Size = new System.Drawing.Size(280, 20);
             this.lasttextbx.TabIndex = 2;
+            this.lasttextbx.Visible = false;
             // 
             // lastlbl
             // 
@@ -81,6 +87,7 @@ namespace contact_tracing_app
             this.lastlbl.Size = new System.Drawing.Size(68, 13);
             this.lastlbl.TabIndex = 3;
             this.lastlbl.Text = "LAST NAME";
+            this.lastlbl.Visible = false;
             // 
             // addresslbl
             // 
@@ -90,6 +97,7 @@ namespace contact_tracing_app
             this.addresslbl.Size = new System.Drawing.Size(59, 13);
             this.addresslbl.TabIndex = 4;
             this.addresslbl.Text = "ADDRESS";
+            this.addresslbl.Visible = false;
             // 
             // phonelbl
             // 
@@ -99,6 +107,7 @@ namespace contact_tracing_app
             this.phonelbl.Size = new System.Drawing.Size(95, 13);
             this.phonelbl.TabIndex = 5;
             this.phonelbl.Text = "PHONE NUMBER";
+            this.phonelbl.Visible = false;
             // 
             // agelbl
             // 
@@ -108,6 +117,7 @@ namespace contact_tracing_app
             this.agelbl.Size = new System.Drawing.Size(29, 13);
             this.agelbl.TabIndex = 6;
             this.agelbl.Text = "AGE";
+            this.agelbl.Visible = false;
             // 
             // agetxtbx
             // 
@@ -115,6 +125,7 @@ namespace contact_tracing_app
             this.agetxtbx.Name = "agetxtbx";
             this.agetxtbx.Size = new System.Drawing.Size(280, 20);
             this.agetxtbx.TabIndex = 7;
+            this.agetxtbx.Visible = false;
             // 
             // phonetxtbx
             // 
@@ -122,6 +133,7 @@ namespace contact_tracing_app
             this.phonetxtbx.Name = "phonetxtbx";
             this.phonetxtbx.Size = new System.Drawing.Size(280, 20);
             this.phonetxtbx.TabIndex = 8;
+            this.phonetxtbx.Visible = false;
             // 
             // genderlbl
             // 
@@ -131,15 +143,17 @@ namespace contact_tracing_app
             this.genderlbl.Size = new System.Drawing.Size(53, 13);
             this.genderlbl.TabIndex = 10;
             this.genderlbl.Text = "GENDER";
+            this.genderlbl.Visible = false;
             // 
-            // contact
+            // contactlbl
             // 
-            this.contact.AutoSize = true;
-            this.contact.Location = new System.Drawing.Point(12, 9);
-            this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(109, 13);
-            this.contact.TabIndex = 11;
-            this.contact.Text = "CONTACT TRACING";
+            this.contactlbl.AutoSize = true;
+            this.contactlbl.Location = new System.Drawing.Point(12, 9);
+            this.contactlbl.Name = "contactlbl";
+            this.contactlbl.Size = new System.Drawing.Size(109, 13);
+            this.contactlbl.TabIndex = 11;
+            this.contactlbl.Text = "CONTACT TRACING";
+            this.contactlbl.Visible = false;
             // 
             // malechk
             // 
@@ -150,16 +164,18 @@ namespace contact_tracing_app
             this.malechk.TabIndex = 12;
             this.malechk.Text = "MALE";
             this.malechk.UseVisualStyleBackColor = true;
+            this.malechk.Visible = false;
             // 
-            // checkBox1
+            // otherchk
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(113, 197);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(140, 17);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "OTHER (please specify)";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.otherchk.AutoSize = true;
+            this.otherchk.Location = new System.Drawing.Point(113, 197);
+            this.otherchk.Name = "otherchk";
+            this.otherchk.Size = new System.Drawing.Size(140, 17);
+            this.otherchk.TabIndex = 13;
+            this.otherchk.Text = "OTHER (please specify)";
+            this.otherchk.UseVisualStyleBackColor = true;
+            this.otherchk.Visible = false;
             // 
             // femalechk
             // 
@@ -170,6 +186,7 @@ namespace contact_tracing_app
             this.femalechk.TabIndex = 14;
             this.femalechk.Text = "FEMALE";
             this.femalechk.UseVisualStyleBackColor = true;
+            this.femalechk.Visible = false;
             // 
             // gendertxtbx
             // 
@@ -177,6 +194,7 @@ namespace contact_tracing_app
             this.gendertxtbx.Name = "gendertxtbx";
             this.gendertxtbx.Size = new System.Drawing.Size(280, 20);
             this.gendertxtbx.TabIndex = 8;
+            this.gendertxtbx.Visible = false;
             // 
             // addresstxtbx
             // 
@@ -184,42 +202,59 @@ namespace contact_tracing_app
             this.addresstxtbx.Name = "addresstxtbx";
             this.addresstxtbx.Size = new System.Drawing.Size(280, 20);
             this.addresstxtbx.TabIndex = 9;
+            this.addresstxtbx.Visible = false;
             // 
-            // EMAILLBL
+            // emaillbl
             // 
-            this.EMAILLBL.AutoSize = true;
-            this.EMAILLBL.Location = new System.Drawing.Point(12, 331);
-            this.EMAILLBL.Name = "EMAILLBL";
-            this.EMAILLBL.Size = new System.Drawing.Size(94, 13);
-            this.EMAILLBL.TabIndex = 15;
-            this.EMAILLBL.Text = "EMAIL ADDRESS";
+            this.emaillbl.AutoSize = true;
+            this.emaillbl.Location = new System.Drawing.Point(12, 331);
+            this.emaillbl.Name = "emaillbl";
+            this.emaillbl.Size = new System.Drawing.Size(94, 13);
+            this.emaillbl.TabIndex = 15;
+            this.emaillbl.Text = "EMAIL ADDRESS";
+            this.emaillbl.Visible = false;
             // 
-            // textBox1
+            // emailtxtbx
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 328);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 20);
-            this.textBox1.TabIndex = 16;
+            this.emailtxtbx.Location = new System.Drawing.Point(113, 328);
+            this.emailtxtbx.Name = "emailtxtbx";
+            this.emailtxtbx.Size = new System.Drawing.Size(280, 20);
+            this.emailtxtbx.TabIndex = 16;
+            this.emailtxtbx.Visible = false;
             // 
-            // textBox3
+            // pic
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(280, 20);
-            this.textBox3.TabIndex = 16;
+            this.pic.Image = ((System.Drawing.Image)(resources.GetObject("pic.Image")));
+            this.pic.Location = new System.Drawing.Point(16, 46);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(380, 246);
+            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic.TabIndex = 17;
+            this.pic.TabStop = false;
+            // 
+            // fillbtn
+            // 
+            this.fillbtn.Location = new System.Drawing.Point(140, 246);
+            this.fillbtn.Name = "fillbtn";
+            this.fillbtn.Size = new System.Drawing.Size(132, 40);
+            this.fillbtn.TabIndex = 19;
+            this.fillbtn.Text = "FILL UP";
+            this.fillbtn.UseVisualStyleBackColor = true;
+            this.fillbtn.Click += new System.EventHandler(this.fillbtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 367);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.EMAILLBL);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(412, 396);
+            this.Controls.Add(this.fillbtn);
+            this.Controls.Add(this.emailtxtbx);
+            this.Controls.Add(this.emaillbl);
             this.Controls.Add(this.femalechk);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.otherchk);
             this.Controls.Add(this.malechk);
-            this.Controls.Add(this.contact);
+            this.Controls.Add(this.contactlbl);
             this.Controls.Add(this.genderlbl);
             this.Controls.Add(this.addresstxtbx);
             this.Controls.Add(this.phonetxtbx);
@@ -232,8 +267,9 @@ namespace contact_tracing_app
             this.Controls.Add(this.lasttextbx);
             this.Controls.Add(this.firstlbl);
             this.Controls.Add(this.firsttxtbx);
+            this.Controls.Add(this.pic);
             this.Name = "Form1";
-            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,15 +287,16 @@ namespace contact_tracing_app
         private System.Windows.Forms.TextBox agetxtbx;
         private System.Windows.Forms.TextBox phonetxtbx;
         private System.Windows.Forms.Label genderlbl;
-        private System.Windows.Forms.Label contact;
+        private System.Windows.Forms.Label contactlbl;
         private System.Windows.Forms.CheckBox malechk;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox otherchk;
         private System.Windows.Forms.CheckBox femalechk;
         private System.Windows.Forms.TextBox gendertxtbx;
         private System.Windows.Forms.TextBox addresstxtbx;
-        private System.Windows.Forms.Label EMAILLBL;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label emaillbl;
+        private System.Windows.Forms.TextBox emailtxtbx;
+        private System.Windows.Forms.PictureBox pic;
+        private System.Windows.Forms.Button fillbtn;
     }
 }
 
