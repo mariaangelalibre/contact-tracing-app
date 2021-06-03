@@ -261,6 +261,7 @@ namespace contact_tracing_app
             this.donebtn.Text = "DONE";
             this.donebtn.UseVisualStyleBackColor = true;
             this.donebtn.Visible = false;
+            this.donebtn.Click += new System.EventHandler(this.donebtn_Click);
             // 
             // Form1
             // 

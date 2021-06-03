@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -120,6 +121,34 @@ namespace contact_tracing_app
                 malechk.Enabled = true;
                 gendertxtbx.Enabled = false;
             }
+        }
+
+        private void donebtn_Click(object sender, EventArgs e)
+        {
+            StreamWriter outputFile;
+            outputFile = File.AppendText("ContactTracing.txt");
+            outputFile.WriteLine("user");
+            outputFile.WriteLine("");
+            outputFile.WriteLine("FIRST NAME: "+firsttxtbx.Text);
+            outputFile.WriteLine("LAST NAME: "+ lasttextbx.Text);
+            outputFile.WriteLine("AGE: "+ agetxtbx.Text);
+            if (malechk.CheckState == CheckState.Checked)
+            {
+                outputFile.WriteLine("GENDER: MALE");
+            }
+            else if (femalechk.CheckState == CheckState.Checked)
+            {
+                outputFile.WriteLine("GENDER: FEMALE");
+            }
+            else if (otherchk.CheckState == CheckState.Checked)
+            {
+                outputFile.WriteLine("GENDER: "+ gendertxtbx.Text);
+            }
+            outputFile.WriteLine("ADDRESS: "+addresstxtbx.Text);
+            outputFile.WriteLine("PHONE NUMBER: "+ phonetxtbx.Text);
+            outputFile.WriteLine("EMAILE ADDRESS: "+ emailtxtbx.Text);
+            outputFile.WriteLine("");
+            outputFile.Close();
         }
     }
 }
