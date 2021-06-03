@@ -170,6 +170,7 @@ namespace contact_tracing_app
             this.malechk.Text = "MALE";
             this.malechk.UseVisualStyleBackColor = true;
             this.malechk.Visible = false;
+            this.malechk.CheckedChanged += new System.EventHandler(this.malechk_CheckedChanged);
             // 
             // otherchk
             // 
@@ -181,6 +182,7 @@ namespace contact_tracing_app
             this.otherchk.Text = "OTHER (please specify)";
             this.otherchk.UseVisualStyleBackColor = true;
             this.otherchk.Visible = false;
+            this.otherchk.CheckedChanged += new System.EventHandler(this.otherchk_CheckedChanged);
             // 
             // femalechk
             // 
@@ -192,9 +194,11 @@ namespace contact_tracing_app
             this.femalechk.Text = "FEMALE";
             this.femalechk.UseVisualStyleBackColor = true;
             this.femalechk.Visible = false;
+            this.femalechk.CheckedChanged += new System.EventHandler(this.femalechk_CheckedChanged);
             // 
             // gendertxtbx
             // 
+            this.gendertxtbx.Enabled = false;
             this.gendertxtbx.Location = new System.Drawing.Point(113, 220);
             this.gendertxtbx.Name = "gendertxtbx";
             this.gendertxtbx.Size = new System.Drawing.Size(280, 20);

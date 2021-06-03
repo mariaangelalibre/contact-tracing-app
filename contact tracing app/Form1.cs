@@ -81,8 +81,29 @@ namespace contact_tracing_app
         private void phonetxtbx_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
                 e.Handled = true;
                 DialogResult a = MessageBox.Show("Invalid input. Please try again.");
             }
+        }
+
+        private void malechk_CheckedChanged(object sender, EventArgs e)
+        {
+            femalechk.Enabled = false;
+            otherchk.Enabled = false;
+        }
+
+        private void femalechk_CheckedChanged(object sender, EventArgs e)
+        {
+            malechk.Enabled = false;
+            otherchk.Enabled = false;
+        }
+
+        private void otherchk_CheckedChanged(object sender, EventArgs e)
+        {
+            malechk.Enabled = false;
+            femalechk.Enabled = false;
+            genderlbl.Enabled = true;
+        }
     }
 }
