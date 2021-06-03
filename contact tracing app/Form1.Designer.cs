@@ -50,6 +50,7 @@ namespace contact_tracing_app
             this.emailtxtbx = new System.Windows.Forms.TextBox();
             this.pic = new System.Windows.Forms.PictureBox();
             this.fillbtn = new System.Windows.Forms.Button();
+            this.donebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +61,7 @@ namespace contact_tracing_app
             this.firsttxtbx.Size = new System.Drawing.Size(280, 20);
             this.firsttxtbx.TabIndex = 0;
             this.firsttxtbx.Visible = false;
+            this.firsttxtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firsttxtbx_KeyPress);
             // 
             // firstlbl
             // 
@@ -78,6 +80,7 @@ namespace contact_tracing_app
             this.lasttextbx.Size = new System.Drawing.Size(280, 20);
             this.lasttextbx.TabIndex = 2;
             this.lasttextbx.Visible = false;
+            this.lasttextbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lasttextbx_KeyPress);
             // 
             // lastlbl
             // 
@@ -126,6 +129,7 @@ namespace contact_tracing_app
             this.agetxtbx.Size = new System.Drawing.Size(280, 20);
             this.agetxtbx.TabIndex = 7;
             this.agetxtbx.Visible = false;
+            this.agetxtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.agetxtbx_KeyPress);
             // 
             // phonetxtbx
             // 
@@ -134,6 +138,7 @@ namespace contact_tracing_app
             this.phonetxtbx.Size = new System.Drawing.Size(280, 20);
             this.phonetxtbx.TabIndex = 8;
             this.phonetxtbx.Visible = false;
+            this.phonetxtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phonetxtbx_KeyPress);
             // 
             // genderlbl
             // 
@@ -195,6 +200,7 @@ namespace contact_tracing_app
             this.gendertxtbx.Size = new System.Drawing.Size(280, 20);
             this.gendertxtbx.TabIndex = 8;
             this.gendertxtbx.Visible = false;
+            this.gendertxtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gendertxtbx_KeyPress);
             // 
             // addresstxtbx
             // 
@@ -242,12 +248,23 @@ namespace contact_tracing_app
             this.fillbtn.UseVisualStyleBackColor = true;
             this.fillbtn.Click += new System.EventHandler(this.fillbtn_Click);
             // 
+            // donebtn
+            // 
+            this.donebtn.Location = new System.Drawing.Point(314, 357);
+            this.donebtn.Name = "donebtn";
+            this.donebtn.Size = new System.Drawing.Size(79, 30);
+            this.donebtn.TabIndex = 20;
+            this.donebtn.Text = "DONE";
+            this.donebtn.UseVisualStyleBackColor = true;
+            this.donebtn.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(412, 396);
+            this.Controls.Add(this.donebtn);
             this.Controls.Add(this.fillbtn);
             this.Controls.Add(this.emailtxtbx);
             this.Controls.Add(this.emaillbl);
@@ -297,6 +314,7 @@ namespace contact_tracing_app
         private System.Windows.Forms.TextBox emailtxtbx;
         private System.Windows.Forms.PictureBox pic;
         private System.Windows.Forms.Button fillbtn;
+        private System.Windows.Forms.Button donebtn;
     }
 }
 

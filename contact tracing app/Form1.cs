@@ -39,6 +39,50 @@ namespace contact_tracing_app
             emaillbl.Visible = true;
             pic.Visible = false;
             fillbtn.Visible = false;
+            donebtn.Visible = true;
         }
+
+        private void firsttxtbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                DialogResult a = MessageBox.Show("Invalid input. Please try again.");
+            }
+        }
+
+        private void lasttextbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                DialogResult a = MessageBox.Show("Invalid input. Please try again.");
+            }
+        }
+
+        private void agetxtbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                DialogResult a = MessageBox.Show("Invalid input. Please try again.");
+            }
+        }
+
+        private void gendertxtbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+                DialogResult a = MessageBox.Show("Invalid input. Please try again.");
+            }
+        }
+
+        private void phonetxtbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
+                DialogResult a = MessageBox.Show("Invalid input. Please try again.");
+            }
     }
 }
