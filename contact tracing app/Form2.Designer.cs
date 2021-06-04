@@ -68,9 +68,9 @@ namespace contact_tracing_app
             // 
             this.fillbtn.Location = new System.Drawing.Point(44, 266);
             this.fillbtn.Name = "fillbtn";
-            this.fillbtn.Size = new System.Drawing.Size(143, 23);
+            this.fillbtn.Size = new System.Drawing.Size(152, 23);
             this.fillbtn.TabIndex = 3;
-            this.fillbtn.Text = "FILL UP AGAIN";
+            this.fillbtn.Text = "FILL UP ANOTHER FROM";
             this.fillbtn.UseVisualStyleBackColor = true;
             this.fillbtn.Click += new System.EventHandler(this.fillbtn_Click);
             // 
