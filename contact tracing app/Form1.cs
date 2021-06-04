@@ -41,6 +41,7 @@ namespace contact_tracing_app
             pic.Visible = false;
             fillbtn.Visible = false;
             donebtn.Visible = true;
+
         }
 
         private void firsttxtbx_KeyPress(object sender, KeyPressEventArgs e)
@@ -92,7 +93,7 @@ namespace contact_tracing_app
         {
             femalechk.Enabled = false;
             otherchk.Enabled = false;
-            if(malechk.CheckState == CheckState.Unchecked)
+            if (malechk.CheckState == CheckState.Unchecked)
             {
                 femalechk.Enabled = true;
                 otherchk.Enabled = true;
@@ -129,9 +130,9 @@ namespace contact_tracing_app
             outputFile = File.AppendText("ContactTracing.txt");
             outputFile.WriteLine("user");
             outputFile.WriteLine("");
-            outputFile.WriteLine("FIRST NAME: "+firsttxtbx.Text);
-            outputFile.WriteLine("LAST NAME: "+ lasttextbx.Text);
-            outputFile.WriteLine("AGE: "+ agetxtbx.Text);
+            outputFile.WriteLine("FIRST NAME: " + firsttxtbx.Text);
+            outputFile.WriteLine("LAST NAME: " + lasttextbx.Text);
+            outputFile.WriteLine("AGE: " + agetxtbx.Text);
             if (malechk.CheckState == CheckState.Checked)
             {
                 outputFile.WriteLine("GENDER: MALE");
@@ -142,13 +143,17 @@ namespace contact_tracing_app
             }
             else if (otherchk.CheckState == CheckState.Checked)
             {
-                outputFile.WriteLine("GENDER: "+ gendertxtbx.Text);
+                outputFile.WriteLine("GENDER: " + gendertxtbx.Text);
             }
-            outputFile.WriteLine("ADDRESS: "+addresstxtbx.Text);
-            outputFile.WriteLine("PHONE NUMBER: "+ phonetxtbx.Text);
-            outputFile.WriteLine("EMAILE ADDRESS: "+ emailtxtbx.Text);
+            outputFile.WriteLine("ADDRESS: " + addresstxtbx.Text);
+            outputFile.WriteLine("PHONE NUMBER: " + phonetxtbx.Text);
+            outputFile.WriteLine("EMAIL ADDRESS: " + emailtxtbx.Text);
             outputFile.WriteLine("");
             outputFile.Close();
+            this.Hide();
+            Form2 f = new Form2();
+            f.Show();
+
         }
     }
 }
