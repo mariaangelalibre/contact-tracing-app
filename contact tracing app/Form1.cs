@@ -151,8 +151,8 @@ namespace contact_tracing_app
             outputFile.WriteLine("");
             outputFile.Close();
             this.Hide();
-            Form2 f = new Form2();
-            f.Show();
+            Form2 f2 = new Form2();
+            f2.Show();
 
         }
     }

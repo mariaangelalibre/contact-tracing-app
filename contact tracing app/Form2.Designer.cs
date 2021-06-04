@@ -31,13 +31,13 @@ namespace contact_tracing_app
         {
             this.viewbtn = new System.Windows.Forms.Button();
             this.listBox = new System.Windows.Forms.ListBox();
-            this.closebtn = new System.Windows.Forms.Button();
-            this.fillagainbtn = new System.Windows.Forms.Button();
+            this.exitbtn = new System.Windows.Forms.Button();
+            this.fillbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // viewbtn
             // 
-            this.viewbtn.Location = new System.Drawing.Point(91, 19);
+            this.viewbtn.Location = new System.Drawing.Point(118, 230);
             this.viewbtn.Name = "viewbtn";
             this.viewbtn.Size = new System.Drawing.Size(237, 23);
             this.viewbtn.TabIndex = 0;
@@ -47,37 +47,37 @@ namespace contact_tracing_app
             // listBox
             // 
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(45, 48);
+            this.listBox.Location = new System.Drawing.Point(44, 12);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(323, 225);
+            this.listBox.Size = new System.Drawing.Size(380, 212);
             this.listBox.TabIndex = 1;
             // 
-            // closebtn
+            // exitbtn
             // 
-            this.closebtn.Location = new System.Drawing.Point(281, 279);
-            this.closebtn.Name = "closebtn";
-            this.closebtn.Size = new System.Drawing.Size(75, 23);
-            this.closebtn.TabIndex = 2;
-            this.closebtn.Text = "CLOSE";
-            this.closebtn.UseVisualStyleBackColor = true;
+            this.exitbtn.Location = new System.Drawing.Point(349, 266);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.Size = new System.Drawing.Size(75, 23);
+            this.exitbtn.TabIndex = 2;
+            this.exitbtn.Text = "EXIT";
+            this.exitbtn.UseVisualStyleBackColor = true;
             // 
-            // fillagainbtn
+            // fillbtn
             // 
-            this.fillagainbtn.Location = new System.Drawing.Point(109, 279);
-            this.fillagainbtn.Name = "fillagainbtn";
-            this.fillagainbtn.Size = new System.Drawing.Size(153, 23);
-            this.fillagainbtn.TabIndex = 3;
-            this.fillagainbtn.Text = "FILL UP ANOTHER FORM";
-            this.fillagainbtn.UseVisualStyleBackColor = true;
-            this.fillagainbtn.Click += new System.EventHandler(this.fillagainbtn_Click);
+            this.fillbtn.Location = new System.Drawing.Point(44, 266);
+            this.fillbtn.Name = "fillbtn";
+            this.fillbtn.Size = new System.Drawing.Size(143, 23);
+            this.fillbtn.TabIndex = 3;
+            this.fillbtn.Text = "FILL UP AGAIN";
+            this.fillbtn.UseVisualStyleBackColor = true;
+            this.fillbtn.Click += new System.EventHandler(this.fillbtn_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 321);
-            this.Controls.Add(this.fillagainbtn);
-            this.Controls.Add(this.closebtn);
+            this.ClientSize = new System.Drawing.Size(468, 321);
+            this.Controls.Add(this.fillbtn);
+            this.Controls.Add(this.exitbtn);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.viewbtn);
             this.Name = "Form2";
@@ -89,7 +89,7 @@ namespace contact_tracing_app
 
         private System.Windows.Forms.Button viewbtn;
         private System.Windows.Forms.ListBox listBox;
-        private System.Windows.Forms.Button closebtn;
-        private System.Windows.Forms.Button fillagainbtn;
+        private System.Windows.Forms.Button exitbtn;
+        private System.Windows.Forms.Button fillbtn;
     }
 }

@@ -17,12 +17,11 @@ namespace contact_tracing_app
         {
             InitializeComponent();
         }
-
-        private void fillagainbtn_Click(object sender, EventArgs e)
+        private void fillbtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f = new Form1();
-            f.Show();
+            Form1 f1 = new Form1();
+            f1.Show();
         }
     }
 }
