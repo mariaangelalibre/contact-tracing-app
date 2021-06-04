@@ -30,9 +30,10 @@ namespace contact_tracing_app
         private void InitializeComponent()
         {
             this.viewbtn = new System.Windows.Forms.Button();
-            this.listBox = new System.Windows.Forms.ListBox();
+            this.infolist = new System.Windows.Forms.ListBox();
             this.exitbtn = new System.Windows.Forms.Button();
             this.fillbtn = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // viewbtn
@@ -43,14 +44,15 @@ namespace contact_tracing_app
             this.viewbtn.TabIndex = 0;
             this.viewbtn.Text = "VIEW USER\'S INFORMATION";
             this.viewbtn.UseVisualStyleBackColor = true;
+            this.viewbtn.Click += new System.EventHandler(this.viewbtn_Click);
             // 
-            // listBox
+            // infolist
             // 
-            this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(44, 12);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(380, 212);
-            this.listBox.TabIndex = 1;
+            this.infolist.FormattingEnabled = true;
+            this.infolist.Location = new System.Drawing.Point(44, 12);
+            this.infolist.Name = "infolist";
+            this.infolist.Size = new System.Drawing.Size(380, 212);
+            this.infolist.TabIndex = 1;
             // 
             // exitbtn
             // 
@@ -71,6 +73,10 @@ namespace contact_tracing_app
             this.fillbtn.UseVisualStyleBackColor = true;
             this.fillbtn.Click += new System.EventHandler(this.fillbtn_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,7 +84,7 @@ namespace contact_tracing_app
             this.ClientSize = new System.Drawing.Size(468, 321);
             this.Controls.Add(this.fillbtn);
             this.Controls.Add(this.exitbtn);
-            this.Controls.Add(this.listBox);
+            this.Controls.Add(this.infolist);
             this.Controls.Add(this.viewbtn);
             this.Name = "Form2";
             this.ResumeLayout(false);
@@ -88,8 +94,9 @@ namespace contact_tracing_app
         #endregion
 
         private System.Windows.Forms.Button viewbtn;
-        private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.ListBox infolist;
         private System.Windows.Forms.Button exitbtn;
         private System.Windows.Forms.Button fillbtn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
