@@ -62,6 +62,7 @@ namespace contact_tracing_app
             this.exitbtn.TabIndex = 2;
             this.exitbtn.Text = "EXIT";
             this.exitbtn.UseVisualStyleBackColor = true;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // fillbtn
             // 

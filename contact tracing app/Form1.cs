@@ -127,9 +127,7 @@ namespace contact_tracing_app
         private void donebtn_Click(object sender, EventArgs e)
         {
             StreamWriter outputFile;
-            outputFile = File.AppendText("ContactTracing.txt");
-            outputFile.WriteLine("user");
-            outputFile.WriteLine("");
+            outputFile = File.CreateText("ContactTracing.txt");
             outputFile.WriteLine("FIRST NAME: " + firsttxtbx.Text);
             outputFile.WriteLine("LAST NAME: " + lasttextbx.Text);
             outputFile.WriteLine("AGE: " + agetxtbx.Text);
@@ -148,7 +146,6 @@ namespace contact_tracing_app
             outputFile.WriteLine("ADDRESS: " + addresstxtbx.Text);
             outputFile.WriteLine("PHONE NUMBER: " + phonetxtbx.Text);
             outputFile.WriteLine("EMAIL ADDRESS: " + emailtxtbx.Text);
-            outputFile.WriteLine("");
             outputFile.Close();
             this.Hide();
             Form2 f2 = new Form2();

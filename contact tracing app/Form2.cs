@@ -15,6 +15,7 @@ namespace contact_tracing_app
     public partial class Form2 : Form
     {
         OpenFileDialog openFile = new OpenFileDialog();
+        string lines = "";
         public Form2()
         {
             InitializeComponent();
@@ -28,22 +29,25 @@ namespace contact_tracing_app
 
         private void viewbtn_Click(object sender, EventArgs e)
         {
-            string lines = "";
             if(openFile.ShowDialog() == DialogResult.OK)
             {
-                StreamReader read = new StreamReader(openFile.FileName);
-                while (lines != null) ; 
+                StreamReader r = new StreamReader(openFile.FileName);
+                while (lines != null)
                 {
-                    lines = read.ReadLine();
+                    lines = r.ReadLine();
                     if(lines != null)
                     {
                         infolist.Items.Add(lines);
                     }
                 }
-                read.Close();
-
+                r.Close();
             }
 
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
