@@ -51,6 +51,7 @@ namespace contact_tracing_app
             this.pic = new System.Windows.Forms.PictureBox();
             this.fillbtn = new System.Windows.Forms.Button();
             this.donebtn = new System.Windows.Forms.Button();
+            this.datelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -263,12 +264,21 @@ namespace contact_tracing_app
             this.donebtn.Visible = false;
             this.donebtn.Click += new System.EventHandler(this.donebtn_Click);
             // 
+            // datelbl
+            // 
+            this.datelbl.AutoSize = true;
+            this.datelbl.Location = new System.Drawing.Point(345, 8);
+            this.datelbl.Name = "datelbl";
+            this.datelbl.Size = new System.Drawing.Size(0, 13);
+            this.datelbl.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(412, 396);
+            this.Controls.Add(this.datelbl);
             this.Controls.Add(this.donebtn);
             this.Controls.Add(this.fillbtn);
             this.Controls.Add(this.emailtxtbx);
@@ -320,6 +330,7 @@ namespace contact_tracing_app
         private System.Windows.Forms.PictureBox pic;
         private System.Windows.Forms.Button fillbtn;
         private System.Windows.Forms.Button donebtn;
+        private System.Windows.Forms.Label datelbl;
     }
 }
 

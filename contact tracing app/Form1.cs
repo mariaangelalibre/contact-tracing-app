@@ -128,6 +128,9 @@ namespace contact_tracing_app
         {
             StreamWriter outputFile;
             outputFile = File.CreateText("ContactTracing.txt");
+            outputFile.WriteLine(DateTime.Now.ToLongDateString());
+            outputFile.WriteLine(DateTime.Now.ToLongTimeString());
+            outputFile.WriteLine("");
             outputFile.WriteLine("FIRST NAME: " + firsttxtbx.Text);
             outputFile.WriteLine("LAST NAME: " + lasttextbx.Text);
             outputFile.WriteLine("AGE: " + agetxtbx.Text);
@@ -150,7 +153,6 @@ namespace contact_tracing_app
             this.Hide();
             Form2 f2 = new Form2();
             f2.Show();
-
         }
     }
 }
