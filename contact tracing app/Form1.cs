@@ -127,7 +127,8 @@ namespace contact_tracing_app
         private void donebtn_Click(object sender, EventArgs e)
         {
             StreamWriter outputFile;
-            outputFile = File.CreateText("ContactTracing.txt");
+            outputFile = File.AppendText("ContactTracing.txt");
+            outputFile.WriteLine("");
             outputFile.WriteLine(DateTime.Now.ToLongDateString());
             outputFile.WriteLine(DateTime.Now.ToLongTimeString());
             outputFile.WriteLine("");
