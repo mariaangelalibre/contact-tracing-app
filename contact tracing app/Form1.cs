@@ -126,34 +126,50 @@ namespace contact_tracing_app
 
         private void donebtn_Click(object sender, EventArgs e)
         {
-            StreamWriter outputFile;
-            outputFile = File.AppendText("ContactTracing.txt");
-            outputFile.WriteLine("");
-            outputFile.WriteLine(DateTime.Now.ToLongDateString());
-            outputFile.WriteLine(DateTime.Now.ToLongTimeString());
-            outputFile.WriteLine("");
-            outputFile.WriteLine("FIRST NAME: " + firsttxtbx.Text);
-            outputFile.WriteLine("LAST NAME: " + lasttextbx.Text);
-            outputFile.WriteLine("AGE: " + agetxtbx.Text);
-            if (malechk.CheckState == CheckState.Checked)
+            if ((firsttxtbx.Text != "")&&(lasttextbx.Text != "") &&(agetxtbx.Text != "") &&(addresstxtbx.Text != "" ) &&(phonetxtbx.Text != "") && (emailtxtbx.Text!="") && ((malechk.CheckState == CheckState.Checked) || (femalechk.CheckState == CheckState.Checked) || ((otherchk.CheckState == CheckState.Checked) && (gendertxtbx.Text != ""))))
             {
-                outputFile.WriteLine("GENDER: MALE");
+                StreamWriter outputFile;
+                outputFile = File.AppendText("ContactTracing.txt");
+                outputFile.WriteLine("");
+                outputFile.WriteLine(DateTime.Now.ToLongDateString());
+                outputFile.WriteLine(DateTime.Now.ToLongTimeString());
+                outputFile.WriteLine("");
+                outputFile.WriteLine("FIRST NAME: " + firsttxtbx.Text);
+                outputFile.WriteLine("LAST NAME: " + lasttextbx.Text);
+                outputFile.WriteLine("AGE: " + agetxtbx.Text);
+                if (malechk.CheckState == CheckState.Checked)
+                {
+                    outputFile.WriteLine("GENDER: MALE");
+                }
+                else if (femalechk.CheckState == CheckState.Checked)
+                {
+                    outputFile.WriteLine("GENDER: FEMALE");
+                }
+                else if (otherchk.CheckState == CheckState.Checked)
+                {
+                    outputFile.WriteLine("GENDER: " + gendertxtbx.Text);
+                }
+                outputFile.WriteLine("ADDRESS: " + addresstxtbx.Text);
+                outputFile.WriteLine("PHONE NUMBER: " + phonetxtbx.Text);
+                outputFile.WriteLine("EMAIL ADDRESS: " + emailtxtbx.Text);
+                outputFile.Close();
+                this.Hide();
+                Form2 f2 = new Form2();
+                f2.Show();
             }
-            else if (femalechk.CheckState == CheckState.Checked)
+            else
             {
-                outputFile.WriteLine("GENDER: FEMALE");
+                MessageBox.Show("Please fill up the form completely");
             }
-            else if (otherchk.CheckState == CheckState.Checked)
+        }
+
+        private void emailtxtbx_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && char.IsWhiteSpace(e.KeyChar))
             {
-                outputFile.WriteLine("GENDER: " + gendertxtbx.Text);
+                e.Handled = true;
+                DialogResult a = MessageBox.Show("Invalid input. Please try again.");
             }
-            outputFile.WriteLine("ADDRESS: " + addresstxtbx.Text);
-            outputFile.WriteLine("PHONE NUMBER: " + phonetxtbx.Text);
-            outputFile.WriteLine("EMAIL ADDRESS: " + emailtxtbx.Text);
-            outputFile.Close();
-            this.Hide();
-            Form2 f2 = new Form2();
-            f2.Show();
         }
     }
 }

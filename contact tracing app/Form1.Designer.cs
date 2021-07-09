@@ -232,6 +232,7 @@ namespace contact_tracing_app
             this.emailtxtbx.Size = new System.Drawing.Size(280, 20);
             this.emailtxtbx.TabIndex = 16;
             this.emailtxtbx.Visible = false;
+            this.emailtxtbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.emailtxtbx_KeyPress);
             // 
             // pic
             // 
@@ -300,6 +301,8 @@ namespace contact_tracing_app
             this.Controls.Add(this.firstlbl);
             this.Controls.Add(this.firsttxtbx);
             this.Controls.Add(this.pic);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
             this.ResumeLayout(false);
